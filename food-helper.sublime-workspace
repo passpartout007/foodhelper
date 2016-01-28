@@ -1,0 +1,262 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"url",
+				"urlRouteProvider"
+			],
+			[
+				"text-de",
+				"text-decoration"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"cla",
+				"classement"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/package.json",
+		"/C/Users/plesecq/workspaces-angular/mongo-express/node_modules/mongo-express/config.js",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/app.js",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/public/javascripts/angularApp.js",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/node_modules/express/lib/router/layer.js",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/app.js",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/home.html",
+		"/C/Users/plesecq/workspaces-angular/flapper-news/index.html",
+		"/C/wamp/www/asclille/templates/beez_20/css/bootstrap.css",
+		"/C/Users/plesecq/workspaces-angular/first-app/app/server.js",
+		"/C/Users/plesecq/workspaces-angular/first-app/node_modules/karma/lib/server.js",
+		"/D/Users/plesecq/Documents/VideOwn/algoExtension.js",
+		"/C/wamp/www/videown/manifest.json",
+		"/D/DevTools/eclipse/eclipse.ini",
+		"/D/workspaces/trail1/hybris/config/localextensions.xml",
+		"/D/workspaces/trail1/hybris/bin/custom/cuppytrail/extensioninfo.xml",
+		"/D/workspaces/trail1/hybris/bin/custom/cuppytrail/resources/cuppytrail-items.xml",
+		"/D/workspaces/trail1/hybris/config/local.properties",
+		"/D/workspaces/trail1/hybris/bin/custom/cuppy/resources/cuppy-items.xml",
+		"/C/wamp/bin/apache/apache2.4.17/bin/php.ini",
+		"/C/wamp/www/asclille/modules/mod_pronos/helper.php",
+		"/C/wamp/www/asclille/configuration.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"3000",
+			"posts",
+			"auth",
+			"factory",
+			"author",
+			"auth",
+			"static",
+			"upvoteComment",
+			"upvote",
+			"upvoteComment",
+			"post",
+			"addComment",
+			"popu",
+			"popul",
+			"addComment",
+			"postsctrl",
+			"posts",
+			"getall",
+			"upvote",
+			"routes",
+			"env",
+			"provider",
+			"urlRouteProvider",
+			"prev",
+			"next-",
+			"indexTab",
+			"active",
+			"key",
+			"close",
+			"e",
+			"Close",
+			"includeJourneeEnCours",
+			"getpronos",
+			"8080",
+			"loadnpm",
+			"server",
+			"8080",
+			"server",
+			"serve",
+			"nb-poin",
+			"actus",
+			"actusJourne",
+			"Xmx",
+			"reporting"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"app.js",
+				"flapper-news/app.js"
+			],
+			[
+				"package.js",
+				"flapper-news/package.json"
+			],
+			[
+				"appan",
+				"flapper-news/public/javascripts/angularApp.js"
+			],
+			[
+				"appangu",
+				"flapper-news/public/javascripts/angularApp.js"
+			],
+			[
+				"layer.js",
+				"flapper-news/node_modules/express/lib/router/layer.js"
+			],
+			[
+				"bootstra",
+				"templates/beez_20/css/bootstrap.css"
+			],
+			[
+				"style.css",
+				"templates/beez_20/css/style.css"
+			],
+			[
+				"package.json",
+				"package.json"
+			],
+			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"server.js",
+				"node_modules/karma/lib/server.js"
+			],
+			[
+				"index.php",
+				"templates/beez_20/index.php"
+			],
+			[
+				"helper.p",
+				"modules/mod_pronos/helper.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true
+}
