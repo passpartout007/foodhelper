@@ -20,8 +20,10 @@ module.exports = function(config) {
       'client/bower_components/angular-sanitize/angular-sanitize.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'client/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.min.js',
-      'client/bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.tpls.min.js',
+      'client/bower_components/flow.js/dist/flow.js',
+      'client/bower_components/ng-flow/dist/ng-flow.js',
+      'client/bower_components/bootstrap-switch/dist/js/bootstrap-switch.js',
+      'client/bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       '.tmp/app/app.js',

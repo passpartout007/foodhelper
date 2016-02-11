@@ -5,6 +5,8 @@
 
 'use strict';
 import Thing from '../api/thing/thing.model';
+import Recipe from '../api/recipe/recipe.model';
+import Ingredient from '../api/ingredient/ingredient.model';
 
 Thing.find({}).removeAsync()
   .then(() => {
@@ -38,3 +40,35 @@ Thing.find({}).removeAsync()
     });
   });
 
+/*
+Ingredient.find({}).removeAsync()
+  .then(() => {
+    Ingredient.create({
+      name: 'Sachet de fondue',
+      archive: ''
+    }, {
+      name: 'Vin blanc',
+      archive: ''
+    }, {
+      name: 'Raclette',
+      archive: ''
+    });
+  });
+
+
+Recipe.find({}).removeAsync()
+  .then(() => {
+    Recipe.create({
+      name: 'Fondue savoyarde',
+      rating: 4,
+      imagePath: '',
+      description: 'Une bonne fondue toute faite, tout simplement !', 
+      accepted: '',
+      archive: '',
+      ingredients : [],
+      creationDate: '',
+      boughtDate: ''
+    });
+  });
+
+*/

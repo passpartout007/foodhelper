@@ -1,22 +1,281 @@
 <navbar></navbar>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
-
 <div class="container">
+
+  <div class="row shoplists-box" ng-show="main.shoplists">
+    <ul class="nav nav-pills nav-justified" role="tablist">
+      <li role="presentation" class="active">
+        <a ui-sref="main" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nouvelle liste</a>
+      </li>
+      <li ng-repeat="shoplist in main.shoplists" role="presentation">        
+        <a href="/shoplist/{{shoplist._id}}" href="#">
+          <span class="glyphicon glyphicon-remove" ng-click="main.deleteShoplist(shoplist)"></span>&nbsp;&nbsp;{{shoplist.name}}</a>
+      </li>
+      <li role="presentation">
+        <a ui-sref="archive" href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Archivés</a>
+      </li>
+    </ul>
+  </div>
+
   <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
+    <div class="col-md-5 searchbox">
+      <div class="input-group">
+        <span class="input-group-addon">Recherche</span>
+        <input type="text" ng-model="search" class="form-control" id="basic-url">      
+      </div>
     </div>
+    <div class="col-md-1">
+       <span ng-show="search.length>0" ng-click="search=''" class=" btn btn-warning glyphicon glyphicon-remove"></span>
+    </div>      
+  </div>
+
+  <div class="row">      
+    <p class="alert alert-danger text-center" ng-show="(main.recipes | filter: {'archive':false} | filter: search).length <= 0">
+      <span class="glyphicon glyphicon-minus-sign"></span>&nbsp;&nbsp;Pas de plats<span ng-show="search"> correspondants à votre recherche</span>
+    </p>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+      <div class="panel panel-default" ng-repeat="recipe in main.recipes | orderBy:'-rating' | orderBy:'boughtDate' | filter: {'archive':false} | filter: search">
+        <div class="panel-heading" role="tab" id="heading_{{recipe._id}}">
+          <h3 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{recipe._id}}" aria-expanded="true" >
+              <strong>{{recipe.name}}</strong>
+            </a>
+            <span class="frm-rating frm-rating__title text-info">
+              <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 1" ng-click="main.rateRecipe(recipe, 1)"></span>
+              <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 1" ng-click="main.rateRecipe(recipe, 1)"></span>
+              <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 2" ng-click="main.rateRecipe(recipe, 2)"></span>
+              <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 2" ng-click="main.rateRecipe(recipe, 2)"></span>
+              <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 3" ng-click="main.rateRecipe(recipe, 3)"></span>
+              <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 3" ng-click="main.rateRecipe(recipe, 3)"></span>
+              <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 4" ng-click="main.rateRecipe(recipe, 4)"></span>
+              <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 4" ng-click="main.rateRecipe(recipe, 4)"></span>
+              <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 5" ng-click="main.rateRecipe(recipe, 5)"></span>
+              <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 5" ng-click="main.rateRecipe(recipe, 5)"></span>
+            </span>    
+            <span class="small" ng-bind="'Consommé le ' + (recipe.boughtDate | date:'dd/MM/yyyy')"/>
+            <span class="pull-right">
+              <input bs-switch ng-model="recipe.accepted" type="checkbox" switch-on-text="Oui" switch-off-text="Non" ng-change="main.updateAccepted(recipe)" >
+              <span class="btn btn-danger btn-sm" ng-click="main.toggleArchiveRecipe(recipe)">
+                <span class="glyphicon glyphicon-trash" title="Ne plus me proposer ce plat pour l'instant" data-toggle="tooltip" data-placement="left" tooltip></span>
+              </span>
+            </span>              
+          </h3>            
+        </div>
+        <div id="{{recipe._id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_{{recipe._id}}" >
+          <div class="panel-body">
+            <!--<div class="col-sm-2 col-md-3">
+              <h4>Photo</h4>
+               <img class="media-object" src="/assets/images/noimage.png" alt="Pas d'image" ng-hide="recipe.imagePath.length > 0"/>
+              <img class="media-object" src="{{recipe.imagePath}}" alt="Photo du plat {{recipe.imagePath}}" ng-show="recipe.imagePath.length > 0"/>
+            </div>              -->
+            <div class="col-sm-12 col-md-6">
+              <h4>Description du plat</h4>
+              <div ng-hide="recipe.description.length > 0">                  
+                <span class="alert alert-warning col-sm-12 col-md-12">
+                  <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#frm-modif-description-{{recipe._id}}">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                  </button>
+                Pas de description pour le moment</span>
+              </div>
+              <div class="well" ng-show="recipe.description.length > 0">
+                <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#frm-modif-description-{{recipe._id}}">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <span>{{recipe.description}}</span>
+              </div>
+              <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="frm-modif-description-title-{{recipe._id}}" id="frm-modif-description-{{recipe._id}}" >
+                <form class="modal-dialog" ng-submit="main.updateDescription(recipe, newDescription)">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="frm-modif-description-title-{{recipe._id}}">Modifier la description</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <textarea rows="10" class="col-md-12" ng-model="newDescription" placeholder="{{recipe.description}}"></textarea>
+                      </div>                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                      <button type="submit" class="btn btn-success btn-close-modal">Valider</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>  
+            <div class="col-sm-12 col-md-6">
+              <h4>Ingrédients</h4>
+              <p ng-hide="recipe.ingredients.length > 0" class="alert alert-warning">Pas d'ingrédients pour le moment</p>
+              <div class="list-group">
+                <span href="#" class="list-group-item" ng-repeat="ingredient in recipe.ingredients" ng-hide="ingredient.quantity == '0'">
+                  <span class="btn btn-danger glyphicon glyphicon-trash pull-right btn-sm" ng-click="main.removeIngredient(recipe, ingredient)"></span>
+                  <strong>{{ingredient.name}}</strong><br/>
+                  Quantité : <small>{{ingredient.quantity}}</small>
+                </span>
+              </div>
+              <button class='btn btn-lg btn-success col-md-12 col-sm-12' data-toggle="modal" data-target="#frm-ajout-ingredient-{{recipe._id}}" ng-click="main.getIngredients(recipe)">Ajouter des ingrédients</button>
+              <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="frm-ajout-ingredient-title-{{recipe._id}}" id="frm-ajout-ingredient-{{recipe._id}}" >
+                <form class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="frm-ajout-ingredient-title-{{recipe._id}}">Ajouter des ingrédients</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <ul class="list-group list-ingredients">
+                          <li class="list-group-item" ng-class="{true:'list-group-item-success', false:''}[aIngredient.quantity!=0]" ng-repeat="aIngredient in recipe.ingredients | filter: main.newIngredient">
+                            <span class="col-md-8">{{aIngredient.name}}</span>                  
+                            <input type="text" ng-model="aQuantity" placeholder="{{aIngredient.quantity}}" class="input-quantity col-md-2" />
+                            <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(recipe, aIngredient.name, aQuantity)">
+                              <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                          </li>
+                          <li class="list-group-item">
+                            <input type="text" ng-model="main.newIngredient" placeholder="Nouvel ingrédient" class="col-md-8"/>                      
+                            <input type="text" ng-model="main.newQuantity" class="input-quantity col-md-2" />
+                            <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(recipe, main.newIngredient, main.newQuantity)">
+                              <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Terminé !</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class='btn btn-lg btn-primary col-md-12 col-sm-12' data-toggle="modal" data-target="#frm-ajout-plat" ng-click="main.justAdded = null">Ajouter un plat</button>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="frm-ajout-plat-title" id="frm-ajout-plat" >
+  <form class="modal-dialog" ng-submit="main.addRecipe()">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="frm-ajout-plat-title" ng-hide="main.justAdded">Ajouter un plat</h4>
+        <h4 class="modal-title" id="frm-ajout-plat-title" ng-show="main.justAdded">Ajouter des ingrédients</h4>
+      </div>
+      <div class="modal-body" ng-hide="main.justAdded">
+        <div class="form-group container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <label for="input-name">Nom du plat</label>
+              <input id="input-name" type="text" class="input-lg form-control" placeholder="Nom de la recette" ng-model="main.name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="frm-photo">Date de dernière consommation</label>
+              <input type="date" ng-model="main.newDate"/>
+            </div>          
+            <div class="col-md-6">
+              <label for="frm-rating">Note</label>
+              <h4 class="frm-rating text-info" >
+                <span class="glyphicon glyphicon-star-empty" ng-show="main.newRating < 1" ng-click="main.rateNewRecipe(1)"></span>
+                <span class="glyphicon glyphicon-star" ng-show="main.newRating >= 1" ng-click="main.rateNewRecipe(1)"></span>
+                <span class="glyphicon glyphicon-star-empty" ng-show="main.newRating < 2" ng-click="main.rateNewRecipe(2)"></span>
+                <span class="glyphicon glyphicon-star" ng-show="main.newRating >= 2" ng-click="main.rateNewRecipe(2)"></span>
+                <span class="glyphicon glyphicon-star-empty" ng-show="main.newRating < 3" ng-click="main.rateNewRecipe(3)"></span>
+                <span class="glyphicon glyphicon-star" ng-show="main.newRating >= 3" ng-click="main.rateNewRecipe(3)"></span>
+                <span class="glyphicon glyphicon-star-empty" ng-show="main.newRating < 4" ng-click="main.rateNewRecipe(4)"></span>
+                <span class="glyphicon glyphicon-star" ng-show="main.newRating >= 4" ng-click="main.rateNewRecipe(4)"></span>
+                <span class="glyphicon glyphicon-star-empty" ng-show="main.newRating < 5" ng-click="main.rateNewRecipe(5)"></span>
+                <span class="glyphicon glyphicon-star" ng-show="main.newRating >= 5" ng-click="main.rateNewRecipe(5)"></span>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="input-description-recette">Description ou checklist de la recette</label>
+              <textarea class="form-control" id="input-description-recette" rows="5" ng-model="main.description"></textarea> 
+            </div>             
+          </div>          
+          
+          <!--<label for="frm-photo">Photo</label>
+          <div flow-init
+               flow-name="main.flow"
+               flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+            <div class="thumbnail" ng-hide="main.flow.files.length">
+              <img src="/assets/images/noimage.png" />
+            </div>
+            <div class="thumbnail" ng-show="main.flow.files.length">
+              <img flow-img="main.flow.files[0]" />
+            </div>
+            <div>
+              <span href="#" class="btn btn-primary" ng-hide="main.flow.files.length" flow-btn flow-attrs="{accept:'image/*'}">Choisir une photo</span>
+              <span href="#" class="btn btn-danger" ng-show="main.flow.files.length"
+                 ng-click="main.flow.cancel()">
+                Supprimer
+              </span>
+            </div>
+          </div><br/>-->
+           
+        </div>
+      </div>
+      <div class="modal-body" ng-show="main.justAdded">
+        <div class="form-group">
+          <ul class="list-group list-ingredients">
+            <li class="list-group-item" ng-repeat="aIngredient in main.justAdded.ingredients | filter: newIngredient">
+              <span class="col-md-8">{{aIngredient.name}}</span>                  
+              <input type="text" ng-model="aQuantity" placeholder="{{aIngredient.quantity}}" class="input-quantity col-md-2" />
+              <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(main.justAdded, aIngredient.name, aQuantity)">
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <input type="text" ng-model="newIngredient" placeholder="Nouvel ingrédient" class="col-md-8"/>                      
+              <input type="text" ng-model="newQuantity" placeholder="0" class="input-quantity col-md-2" />
+              <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(main.justAdded, newIngredient, newQuantity)">
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+        <button type="submit" class="btn btn-primary" ng-hide="main.justAdded">Suivant</button>
+        <button type="submit" class="btn btn-success btn-close-modal" ng-show="main.justAdded">Terminé !</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="popover-wrapper" ng-show="(main.recipes | filter:{'accepted':true}).length > 0">
+  <div ng-show="main.displayList" class="popover top static-popover-bottom" id="shoplist">
+    <div class="arrow"></div>
+    <h3 ng-click="main.displayList = false" class="popover-title">Liste de courses<span class="badge pull-right" ng-bind="(main.recipes | filter:{'accepted':true}).length"/></h3>
+    <div class="popover-content">
+      <div>
+        <div class="list-group" ng-repeat="recipe in main.recipes | filter:{'accepted':true}" ng-hide="ingredient.quantity == '0'">
+          <span href="#" class="list-group-item" ng-repeat="aIngredient in recipe.ingredients" ng-hide="aIngredient.quantity == '0'">
+              {{aIngredient.name}}<span class="badge">{{aIngredient.quantity}}</span>
+          </span>
+        </div>
+        <button type="button" class="btn btn-success col-md-12" ng-click="main.addShopList()">Sauvegarder la liste</button></h4>
+      </div>
+    </div>
+  </div>
+
+  <div ng-hide="main.displayList" class="popover top static-popover-bottom" id="shoplist">
+    <div class="arrow"></div>
+    <h3 ng-click="main.displayList = true" class="popover-title">Liste de courses<span class="badge pull-right" ng-bind="(main.recipes | filter:{'accepted':true}).length"/></h3>
   </div>
 </div>
 
 <footer></footer>
+
+<script type="text/javascript">
+  $('.btn-close-modal').click(function() {
+    $(".modal.in").modal('hide');
+  });
+</script>

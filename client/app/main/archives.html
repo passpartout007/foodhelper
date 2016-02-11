@@ -1,0 +1,57 @@
+<navbar></navbar>
+
+<div class="container">
+
+  <div class="row shoplists-box" ng-show="main.shoplists">
+    <ul class="nav nav-pills nav-justified" role="tablist">
+      <li role="presentation">
+        <a ui-sref="main" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nouvelle liste</a>
+      </li>
+      <li ng-repeat="shoplist in main.shoplists" role="presentation">        
+        <a href="/shoplist/{{shoplist._id}}" href="#">
+          <span class="glyphicon glyphicon-remove" ng-click="main.deleteShoplist(shoplist)"></span>&nbsp;&nbsp;{{shoplist.name}}</a>
+      </li>
+      <li role="presentation" class="active">
+        <a ui-sref="archive" href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Archivés</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5 searchbox">
+      <div class="input-group">
+        <span class="input-group-addon">Recherche</span>
+        <input type="text" ng-model="search" class="form-control" id="basic-url">      
+      </div>
+    </div>
+    <div class="col-md-1">
+       <span ng-show="search.length>0" ng-click="search=''" class=" btn btn-warning glyphicon glyphicon-remove"></span>
+    </div>      
+  </div>
+
+  <div class="row">
+    <p class="alert alert-danger text-center" ng-show="(main.recipes | filter: {'archive':true} | filter:search).length <= 0">
+      <span class="glyphicon glyphicon-minus-sign"></span>&nbsp;&nbsp;Pas de plats<span ng-show="search"> correspondants à votre recherche</span>
+    </p>
+
+    <div ng-show="(main.recipes | filter: {'archive':true} | filter:search).length > 0" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+      <div class="panel panel-default" ng-repeat="recipe in main.recipes | orderBy:'-rating' | filter: {'archive':true} | filter:searchbox" >
+        <div class="panel-heading" role="tab" id="heading_{{recipe._id}}">
+          <h2 class="panel-title archives-actions">
+            <a role="button" data-parent="#accordion" href="#{{recipe._id}}" >
+              <strong>{{recipe.name}}</strong>  
+            </a>
+            <span class="btn btn-success btn-sm pull-right" ng-click="main.toggleArchiveRecipe(recipe)" data-toggle="tooltip" data-placement="top" title="Restaurer ce plat" tooltip>
+              <span class="glyphicon glyphicon glyphicon-floppy-open"></span>
+            </span>
+            <span class="btn btn-danger btn-sm pull-right" ng-click="main.deleteRecipe(recipe)" data-toggle="tooltip" data-placement="left" title="Supprimer définitivement ce plat" tooltip>
+              <span class="glyphicon glyphicon glyphicon-remove"></span>
+            </span>
+          </h2>            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer></footer>

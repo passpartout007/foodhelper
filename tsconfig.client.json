@@ -12,6 +12,7 @@
         "client/app/app.ts",
         "client/app/main/main.controller.ts",
         "client/app/main/main.ts",
+        "client/app/main/shoplist.controller.ts",
         "client/components/footer/footer.directive.ts",
         "client/components/navbar/navbar.controller.ts",
         "client/components/navbar/navbar.directive.ts",
