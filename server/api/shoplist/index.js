@@ -2,9 +2,8 @@
 
 var express = require('express');
 var controller = require('./shoplist.controller');
-import Shoplist from '../shoplist/shoplist.model';
-import Recipe from '../recipe/recipe.model';
-
+var Shoplist = require('../shoplist/shoplist.model');
+var Recipe = require('../recipe/recipe.model');
 var router = express.Router();
 
 router.param('shoplist', function(req, res, next, id) {
