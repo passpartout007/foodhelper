@@ -9,9 +9,9 @@
 
 'use strict';
 
-import _ from 'lodash';
-import Shoplist from './shoplist.model';
-import Recipe from '../recipe/recipe.model';
+var _ = require('lodash');
+var Shoplist = require('./shoplist.model');
+var Recipe = require('../recipe/recipe.model');
 
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport('smtps://passpartout007%40gmail.com:Support2222@smtp.gmail.com');

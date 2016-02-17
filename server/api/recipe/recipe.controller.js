@@ -9,8 +9,9 @@
 
 'use strict';
 
-import _ from 'lodash';
-import Recipe from './recipe.model';
+var _ = require('lodash');
+var Recipe = require('./recipe.model');
+
 var fs = require('fs');
 
 function respondWithResult(res, statusCode) {
