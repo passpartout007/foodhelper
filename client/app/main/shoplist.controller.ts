@@ -1,10 +1,11 @@
 'use strict';
 
-(function($stateParams) {
+(function($stateParams, $state) {
 
 class ShoplistController {
 
-  constructor($http, $scope, $filter, $stateParams) {
+  constructor($http, $scope, $filter, $stateParams, $state) {
+    this.$state = $state;
     this.$http = $http;
     this.$filter = $filter;
     this.shoplists = [];  
@@ -60,6 +61,8 @@ class ShoplistController {
 
   // Modifie la recette passée en paramétre pour l'archiver ou non
   removeRecipeFromShoplist(aShoplist, aRecipe) {
+    this.recipeDone(aRecipe);
+
     if (aShoplist, aRecipe) {
       this.$http.delete('/api/shoplists/' + aShoplist._id + '/recipes/' + aRecipe._id)
       .success((function(that) {
@@ -83,7 +86,18 @@ class ShoplistController {
     if (aRecipe) {
       var tmpRecipe = aRecipe;
       tmpRecipe.rating = rating;
-      this.$http.put('/api/recipes/' + tmpRecipe._id, tmpRecipe).success(function(data){
+      this.$http.put('/api/recipes/' + tmpRecipe._id, {'rating':rating}).success(function(data){
+        aRecipe = tmpRecipe;
+      });
+    }
+  }
+
+  // Modifie la date de consommation d'une recette
+  recipeDone(aRecipe) {
+    if (aRecipe) {
+      var tmpRecipe = aRecipe;
+      tmpRecipe.boughtDate = new Date();
+      this.$http.put('/api/recipes/' + tmpRecipe._id, {'boughtDate':tmpRecipe.boughtDate}).success(function(data){
         aRecipe = tmpRecipe;
       });
     }
@@ -103,6 +117,7 @@ class ShoplistController {
         var shoplistToDelete = this.shoplists.find(function(element, index, array) {return element._id == shoplist._id});
         var indexToDelete = this.shoplists.indexOf(shoplistToDelete);
         this.shoplists.splice(indexToDelete, 1);
+        this.$state.go("main");
       });
     }    
   }

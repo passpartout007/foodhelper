@@ -13,6 +13,9 @@ import _ from 'lodash';
 import Shoplist from './shoplist.model';
 import Recipe from '../recipe/recipe.model';
 
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport('smtps://passpartout007%40gmail.com:Support2222@smtp.gmail.com');
+
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function(entity) {
@@ -108,7 +111,6 @@ export function addRecipe(req, res) {
           if(err) {
             handleError(res);
           } else {
-            aRecipe.boughtDate = new Date();
             aRecipe.accepted = false;
             aRecipe.save(function(err, recipe) {
               if(err){ return next(err); }
@@ -149,3 +151,26 @@ export function destroyRecipe(req, res) {
     });
   }  
 }
+
+// Sends a mail with the shoplist
+export function sendMail(req, res) {
+  if(req.shoplist) {
+    console.log(req.body);
+    var mailOptions = {
+      from: "pierre.lesecq@gmail.com",
+      to: "pierre.lesecq@gmail.com",
+      subject: "test",
+      text: "Voila un contenu",
+      html: '<b>Ca cest du html</b>'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+        return console.log(error);
+      }
+      console.log('Message sent: ' + info.response);
+    });
+    transporter.close();
+  }
+} 
+

@@ -8,8 +8,7 @@
         <a ui-sref="main" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nouvelle liste</a>
       </li>
       <li ng-repeat="shoplist in main.shoplists" role="presentation">        
-        <a href="/shoplist/{{shoplist._id}}" href="#">
-          <span class="glyphicon glyphicon-remove" ng-click="main.deleteShoplist(shoplist)"></span>&nbsp;&nbsp;{{shoplist.name}}</a>
+        <a href="/shoplist/{{shoplist._id}}" href="#">{{shoplist.name}}</a>
       </li>
       <li role="presentation">
         <a ui-sref="archive" href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Archivés</a>
@@ -26,7 +25,7 @@
     </div>
     <div class="col-md-1">
        <span ng-show="search.length>0" ng-click="search=''" class=" btn btn-warning glyphicon glyphicon-remove"></span>
-    </div>      
+    </div>
   </div>
 
   <div class="row">      
@@ -253,7 +252,11 @@
 <div class="popover-wrapper" ng-show="(main.recipes | filter:{'accepted':true}).length > 0">
   <div ng-show="main.displayList" class="popover top static-popover-bottom" id="shoplist">
     <div class="arrow"></div>
-    <h3 ng-click="main.displayList = false" class="popover-title">Liste de courses<span class="badge pull-right" ng-bind="(main.recipes | filter:{'accepted':true}).length"/></h3>
+    <h3 class="popover-title">
+      <input type="text" placeholder="Nouvelle liste" ng-model="main.newShoplistName" class="input-shoplist-name form-control"/>
+      <button class="btn btn-default btn-close-shoplist" ng-click="main.displayList = false"><span class="glyphicon glyphicon-chevron-down"></span></button>
+    </h3>
+
     <div class="popover-content">
       <div>
         <div class="list-group" ng-repeat="recipe in main.recipes | filter:{'accepted':true}" ng-hide="ingredient.quantity == '0'">
@@ -261,7 +264,8 @@
               {{aIngredient.name}}<span class="badge">{{aIngredient.quantity}}</span>
           </span>
         </div>
-        <button type="button" class="btn btn-success col-md-12" ng-click="main.addShopList()">Sauvegarder la liste</button></h4>
+        <button type="button" class="btn btn-success col-md-12" ng-click="main.addShopList()">
+          <span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Sauvegarder la liste</button></h4>
       </div>
     </div>
   </div>

@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"formatedDate"
+			],
+			[
+				"forma",
+				"formatedShoplist"
+			],
+			[
+				"qu",
+				"quantity"
+			],
+			[
+				"ingre",
+				"ingredientToSearch"
+			],
+			[
+				"format",
+				"formatedShoplist"
+			],
+			[
+				"ingred",
+				"ingredient"
+			],
+			[
+				"getShop",
+				"getShoplist"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"accepted",
+				"acceptedIds"
+			],
+			[
+				"shopli",
+				"shoplist"
+			],
+			[
+				"accep",
+				"acceptedRecipes"
+			],
+			[
+				"stt",
+				"statusCode"
+			],
+			[
+				"creat",
+				"creationDate"
+			],
+			[
 				"url",
 				"urlRouteProvider"
 			],
@@ -23,6 +75,95 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/app/main/main.html",
+			"settings":
+			{
+				"buffer_size": 17875,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/main/archives.html",
+			"settings":
+			{
+				"buffer_size": 2653,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/app/main/shoplist.html",
+			"settings":
+			{
+				"buffer_size": 6257,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/app/main/main.controller.ts",
+			"settings":
+			{
+				"buffer_size": 6201,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/main/shoplist.controller.ts",
+			"settings":
+			{
+				"buffer_size": 4010,
+				"line_ending": "Windows",
+				"name": "'use strict';"
+			}
+		},
+		{
+			"file": "client/app/main/main.css",
+			"settings":
+			{
+				"buffer_size": 1846,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/api/ingredient/ingredient.controller.js",
+			"settings":
+			{
+				"buffer_size": 4225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/api/recipe/recipe.controller.js",
+			"settings":
+			{
+				"buffer_size": 2410,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/api/shoplist/shoplist.controller.js",
+			"settings":
+			{
+				"buffer_size": 4347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/api/shoplist/index.js",
+			"settings":
+			{
+				"buffer_size": 991,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 20732,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -48,6 +189,58 @@
 	},
 	"file_history":
 	[
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.controller.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/index.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/index.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/navbar/navbar.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/index.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/navbar/navbar.controller.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.css",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/shoplist/main.css",
+		"/C/Users/plesecq/workspaces-angular/food-helper/Gruntfile.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/ids/ids.filter.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/index.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/tsconfig.client.json",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/app.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/.tmp/app/app.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/grunt-injector/tasks/injector.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/ids/ids.filter.spec.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/footer/footer.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/routes.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/package.json",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/angular-bootstrap-switch/src/directives/bsSwitch.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/tooltip/tooltip.directive.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/app.constant.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/app.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/flow-node.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/flow-node.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/dist/client/index.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/flow.js/dist/flow.min.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/ng-flow/dist/ng-flow.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/grunt-usemin/lib/flow.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/archives.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/.tmp/app/main/main.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/recipes/recipes.service.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/archive/archive.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.integration.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/seed.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/composition/composition.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.integration.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/express.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/express/lib/express.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.integration.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/plat/plat.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/angular-ui-router/release/angular-ui-router.js",
 		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/package.json",
 		"/C/Users/plesecq/workspaces-angular/mongo-express/node_modules/mongo-express/config.js",
 		"/C/Users/plesecq/workspaces-angular/flapper-news/flapper-news/app.js",
@@ -80,6 +273,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -87,50 +281,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"3000",
-			"posts",
-			"auth",
-			"factory",
-			"author",
-			"auth",
-			"static",
-			"upvoteComment",
-			"upvote",
-			"upvoteComment",
-			"post",
-			"addComment",
+			"date",
+			"format",
+			"watch",
+			"port",
+			"35",
+			"357",
+			"export",
+			"shoplist",
+			"class",
+			"statep",
+			"getingre",
+			"removeIngre",
+			"addingredient",
+			"addIngredient",
+			"boughtd",
+			" his",
+			"his",
+			"indexOf",
+			"indexof",
+			"selectedShoplist",
+			"addIngredientsToFormattedShoplist",
+			"console.",
+			"console.log",
+			"this",
+			"log",
+			"console.lo",
+			"formatedShoplist",
+			"success",
+			"addIngredientsToFormattedShoplist",
+			"getingredients",
+			"getIngredients",
+			"addIngredientsToFormattedShoplist",
+			"formated",
+			"getIngred",
+			"getingred",
+			"this.getingredients",
+			"getIngredients",
+			"Ajouter des ingrédients",
+			"justadded",
+			"removeIngredient",
+			"getIngredients",
+			"aingredients",
+			"getIngredients",
+			"displayList",
+			"awesomeThings",
+			"displayList",
+			"newRating",
+			"newDate",
+			"newQuantity",
+			"bought",
+			"date",
+			"search",
+			"archive",
+			"tooltip",
+			"title=\"",
+			"title",
+			"glyphicon-",
+			"console.lo",
+			"con",
+			"find",
+			"slice",
+			"addIngre",
+			"removeEntity",
+			"shoplist.recip",
+			"accepted",
+			"ng-hide",
+			"newIngredient",
+			"archive",
+			"archives",
+			"filter",
+			"ng-rep",
+			".save",
+			"sli",
+			"s",
+			"sli",
+			"slice",
+			"populate",
 			"popu",
-			"popul",
-			"addComment",
-			"postsctrl",
-			"posts",
-			"getall",
-			"upvote",
-			"routes",
-			"env",
-			"provider",
-			"urlRouteProvider",
-			"prev",
-			"next-",
-			"indexTab",
-			"active",
-			"key",
-			"close",
-			"e",
-			"Close",
-			"includeJourneeEnCours",
-			"getpronos",
-			"8080",
-			"loadnpm",
-			"server",
-			"8080",
-			"server",
+			"console.log",
+			"cons",
+			".find",
+			"removeingre",
+			"delete",
+			"dlete",
+			"req.params.",
+			"ng-class",
+			"main.",
+			"shoplists",
+			"main.",
+			"sref",
+			"shopda",
+			"shopdate",
+			"index",
+			"accepted",
+			"getRecipes",
+			"recipes",
+			".save",
+			"saveUpdates",
+			"saveUpdates\n",
+			".save",
+			"Recipe",
+			"files",
+			"/app",
+			"ids",
+			"injector",
 			"serve",
-			"nb-poin",
-			"actus",
-			"actusJourne",
-			"Xmx",
-			"reporting"
+			"jsTest",
+			"injectCss",
+			"injectJS",
+			"ids",
+			"files",
+			"inject",
+			"injectJS",
+			"injectJS\n",
+			"yeoman.client",
+			"injector",
+			"js",
+			"ids",
+			"starttag",
+			"inject",
+			"filter",
+			"direct",
+			"ids",
+			"ids.",
+			"idsfilter",
+			"filter",
+			"each",
+			"update"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -138,6 +416,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"shoplist.",
+			"text-info",
+			"this",
+			".recipe",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -148,8 +431,316 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/app/main/main.html",
+					"settings":
+					{
+						"buffer_size": 17875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3429,
+								3449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/main/archives.html",
+					"settings":
+					{
+						"buffer_size": 2653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								301
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/app/main/shoplist.html",
+					"settings":
+					{
+						"buffer_size": 6257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2549,
+								2553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 533.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/app/main/main.controller.ts",
+					"settings":
+					{
+						"buffer_size": 6201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5438,
+								5438
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2908.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/app/main/shoplist.controller.ts",
+					"settings":
+					{
+						"buffer_size": 4010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1025,
+								1025
+							]
+						],
+						"settings":
+						{
+							"auto_name": "'use strict';",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/app/main/main.css",
+					"settings":
+					{
+						"buffer_size": 1846,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								508,
+								508
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/api/ingredient/ingredient.controller.js",
+					"settings":
+					{
+						"buffer_size": 4225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2296,
+								2296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1141.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/api/recipe/recipe.controller.js",
+					"settings":
+					{
+						"buffer_size": 2410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1657,
+								1657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1388.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/api/shoplist/shoplist.controller.js",
+					"settings":
+					{
+						"buffer_size": 4347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								941,
+								941
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "server/api/shoplist/index.js",
+					"settings":
+					{
+						"buffer_size": 991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								742,
+								750
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 20732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18072,
+								18072
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12826.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -186,7 +777,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -195,12 +786,148 @@
 		"selected_items":
 		[
 			[
+				"grunts",
+				"Gruntfile.js"
+			],
+			[
+				"ain.contro",
+				"client/app/main/main.controller.ts"
+			],
+			[
+				"main.css",
+				"client/app/main/main.css"
+			],
+			[
+				"ids",
+				"client/app/ids/ids.filter.js"
+			],
+			[
+				"index.html",
+				"client/index.html"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.js"
+			],
+			[
+				"index.htm",
+				"client/index.html"
+			],
+			[
 				"app.js",
-				"flapper-news/app.js"
+				".tmp/app/app.js"
+			],
+			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"injector",
+				"node_modules/grunt-injector/tasks/injector.js"
+			],
+			[
+				"index.ht",
+				"client/index.html"
+			],
+			[
+				"index.h",
+				"client/index.html"
+			],
+			[
+				"app.ts",
+				"client/app/app.ts"
+			],
+			[
+				"routes",
+				"server/routes.js"
+			],
+			[
+				"shoplist",
+				"server/api/shoplist/shoplist.model.js"
+			],
+			[
+				"route",
+				"server/routes.js"
+			],
+			[
+				"footer.html",
+				"client/components/footer/footer.html"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"switch",
+				"client/bower_components/angular-bootstrap-switch/src/directives/bsSwitch.js"
+			],
+			[
+				"app.",
+				"client/app/app.ts"
+			],
+			[
+				"index.",
+				"client/index.html"
+			],
+			[
+				"routes.js",
+				"server/routes.js"
+			],
+			[
+				"package.",
+				"package.json"
+			],
+			[
+				"flow-",
+				"server/flow-node.js"
+			],
+			[
+				"routes.",
+				"server/routes.js"
+			],
+			[
+				"package.json",
+				"package.json"
+			],
+			[
+				"flow.m",
+				"client/bower_components/flow.js/dist/flow.min.js"
+			],
+			[
+				"ng-f",
+				"client/bower_components/ng-flow/dist/ng-flow.js"
+			],
+			[
+				"flow",
+				"node_modules/grunt-usemin/lib/flow.js"
+			],
+			[
+				"seed",
+				"server/config/seed.js"
 			],
 			[
 				"package.js",
-				"flapper-news/package.json"
+				"package.json"
+			],
+			[
+				"gruntfi",
+				"Gruntfile.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"package.j",
+				"package.json"
+			],
+			[
+				"angular-ui-",
+				"client/bower_components/angular-ui-router/release/angular-ui-router.js"
+			],
+			[
+				"gruntfile.",
+				"Gruntfile.js"
 			],
 			[
 				"appan",
@@ -221,14 +948,6 @@
 			[
 				"style.css",
 				"templates/beez_20/css/style.css"
-			],
-			[
-				"package.json",
-				"package.json"
-			],
-			[
-				"gruntf",
-				"Gruntfile.js"
 			],
 			[
 				"server.js",

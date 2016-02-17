@@ -8,8 +8,7 @@
         <a ui-sref="main" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nouvelle liste</a>
       </li>
       <li ng-repeat="aShoplist in shoplist.shoplists" role="presentation" ng-class="{true:'active', false:''}[aShoplist._id==shoplist.selectedShoplist._id]">
-        <a href="/shoplist/{{aShoplist._id}}" href="#">
-          <span class="glyphicon glyphicon-remove" ng-click="shoplist.deleteShoplist(aShoplist)"></span>&nbsp;&nbsp;{{aShoplist.name}}</a>
+        <a href="/shoplist/{{aShoplist._id}}" href="#">{{aShoplist.name}}</a>
       </li>
       <li role="presentation">
         <a ui-sref="archive" href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Archivés</a>
@@ -20,15 +19,14 @@
 
   <div class="row"> 
     <div class="col-md-6">
-      <h2>Liste de courses</h2><hr/>
+      <h2>Liste des ingrédients</h2><hr/>
       <div>
-        <div class="list-group" >
-          <span href="#" class="list-group-item" ng-repeat="(name, value) in shoplist.formatedShoplist" >
+        <div class="list-group ingredients-list">
+          <span href="#" class="list-group-item" ng-repeat="(name, value) in shoplist.formatedShoplist" ng-click="value.ok=!value.ok" ng-class="{true:'list-group-item-success', false:''}[value.ok==true]">
               <h4 class="list-group-item-heading">{{name}}</h4>
-              <span ng-repeat="(key, quantity) in value.quantities"><span class="label label-success">{{quantity}}</span>&nbsp;<span ng-hide="key == value.quantities.length -1">+&nbsp;</span></span>
+              <h4><span ng-repeat="(key, quantity) in value.quantities track by $index"><span class="label label-success">{{quantity}}</span>&nbsp;<span ng-hide="key == value.quantities.length -1">+&nbsp;</span></span></h4>
           </span>
         </div>
-        <button type="button" class="btn btn-success col-md-12" ng-click="main.exportList()">Exporter la liste</button></h4>
       </div>
     </div>
     <div class="col-md-6">
@@ -69,8 +67,8 @@
                 </span>    
 
                 <span class="pull-right">
-                  <span class="btn btn-danger btn-sm" ng-click="shoplist.removeRecipeFromShoplist(shoplist.selectedShoplist, recipe)" title="Ne plus me proposer ce plat pour l'instant" data-toggle="tooltip" data-placement="left" tooltip>
-                    <span class="glyphicon glyphicon-remove"></span>
+                  <span class="btn btn-success btn-sm" ng-click="shoplist.removeRecipeFromShoplist(shoplist.selectedShoplist, recipe)" title="J'en ai fini avec ce plat" data-toggle="tooltip" data-placement="left" tooltip>
+                    <span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Mangé !
                   </span>
                 </span>              
               </h3>            
@@ -97,6 +95,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <span class="btn btn-danger col-md-12" ng-click="shoplist.deleteShoplist(shoplist.selectedShoplist)"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Supprimer la liste</span>
       </div>
     </div>
     

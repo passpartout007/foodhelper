@@ -8,8 +8,7 @@
         <a ui-sref="main" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nouvelle liste</a>
       </li>
       <li ng-repeat="shoplist in main.shoplists" role="presentation">        
-        <a href="/shoplist/{{shoplist._id}}" href="#">
-          <span class="glyphicon glyphicon-remove" ng-click="main.deleteShoplist(shoplist)"></span>&nbsp;&nbsp;{{shoplist.name}}</a>
+        <a href="/shoplist/{{shoplist._id}}" href="#">{{shoplist.name}}</a>
       </li>
       <li role="presentation" class="active">
         <a ui-sref="archive" href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Archivés</a>

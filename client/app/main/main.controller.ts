@@ -39,6 +39,7 @@ class MainController {
 
   // Remplit le tableau d'ingredients de la recette passée en paramétre
   getIngredients(recipe) {
+
     this.$http.get('/api/recipes/' + recipe._id + "/ingredients").then(response => {
       recipe.ingredients = response.data;
     });
@@ -176,11 +177,15 @@ class MainController {
   addShopList() {
     var nowDate = new Date();
     var formatedDate = this.$filter('date')(nowDate, "dd/MM/yyyy"); 
+    if(!this.newShoplistName) {
+      this.newShoplistName = "Liste du " + formatedDate;
+    }
     this.$http.post('/api/shoplists/', {
-      name: "Shoplist " + formatedDate, 
+      name: this.newShoplistName, 
       boughtDate: nowDate,
       archive:false
     }).then(response => {
+      this.newShoplistName = "";
       var idShopList = response.data._id;
       var acceptedRecipes = this.$filter('filter')(this.recipes, {accepted:true}); 
       var acceptedIds = [];

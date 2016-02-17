@@ -88,7 +88,6 @@ export function indexWholeList(req, res) {
           handleError(res);
         } else {
           var finalReturn = [];
-          //console.log(recipeIngredients);
           finalReturn = recipeIngredients.concat(allIngredients);
           var cache = {};
           finalReturn = finalReturn.filter(function(elem,index,array){

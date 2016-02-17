@@ -23,6 +23,7 @@ router.get('/', controller.index);
 router.get('/:shoplist', controller.show);
 router.post('/:shoplist/recipes/', controller.addRecipe);
 router.post('/', controller.create);
+router.post('/:shoplist/mail', controller.sendMail);
 router.put('/:shoplist', controller.update);
 router.patch('/:shoplist', controller.update);
 router.delete('/:shoplist', controller.destroy);
