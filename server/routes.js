@@ -4,10 +4,10 @@
 
 'use strict';
 
-import errors from './components/errors';
-import path from 'path';
+var errors = require('./components/errors');
+var path = require('path');
 
-export default function(app) {
+module.exports = function(app) {
   // Insert routes below
   app.use('/api/recipes', require('./api/recipe'), require('./api/ingredient'));
   app.use('/api/shoplists', require('./api/shoplist'));  

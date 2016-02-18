@@ -30,4 +30,4 @@ function emitEvent(event) {
   }
 }
 
-export default RecipeEvents;
+module.exports = RecipeEvents;

@@ -14,4 +14,4 @@ var RecipeSchema = new mongoose.Schema({
   boughtDate: { type: Date, default: Date.now }
 });
 
-export default mongoose.model('Recipe', RecipeSchema);
+module.exports = mongoose.model('Recipe', RecipeSchema);

@@ -9,4 +9,4 @@ var ShoplistSchema = new mongoose.Schema({
   archive: { type: Boolean, default: false}
 });
 
-export default mongoose.model('Shoplist', ShoplistSchema);
+module.exports = mongoose.model('Shoplist', ShoplistSchema);

@@ -9,4 +9,4 @@ var IngredientSchema = new mongoose.Schema({
   quantity: String
 });
 
-export default mongoose.model('Ingredient', IngredientSchema);
+module.exports = mongoose.model('Ingredient', IngredientSchema);
