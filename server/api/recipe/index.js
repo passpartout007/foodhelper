@@ -1,6 +1,6 @@
 'use strict';
 
-import Recipe from './recipe.model';
+var Recipe = require('./recipe.model');
 
 var express = require('express');
 var controllerRecipe = require('./recipe.controller');
