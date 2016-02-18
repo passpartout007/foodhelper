@@ -61,14 +61,14 @@ function handleError(res, statusCode) {
 }
 
 // Gets a list of Ingredients
-export function index(req, res) {
+module.exports.index = function (req, res) {
   Ingredient.distinctAsync("name")
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
 // Gets the whole ingredients list, with quantity if filled in, 0 otherwise
-export function indexWholeList(req, res) {
+module.exports.indexWholeList = function (req, res) {
   Ingredient.find({}, function (err, allIngredients) {
     if(err) {
       handleError(res);
@@ -101,7 +101,7 @@ export function indexWholeList(req, res) {
 }
 
 // Gets a single Ingredient from the DB
-export function show(req, res) {
+module.exports.show = function (req, res) {
   Ingredient.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
@@ -109,7 +109,7 @@ export function show(req, res) {
 }
 
 // Creates a new Ingredient in the DB
-export function create(req, res) {
+module.exports.create = function (req, res) {
   var ingredient = new Ingredient(req.body);
   ingredient.recipe = req.recipe;
   ingredient.save(function(err, ingredient){
@@ -125,7 +125,7 @@ export function create(req, res) {
 }
 
 // Updates an existing Ingredient in the DB
-export function update(req, res) {
+module.exports.update = function (req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
@@ -137,7 +137,7 @@ export function update(req, res) {
 }
 
 // Deletes a Ingredient from the DB
-export function destroy(req, res) {
+module.exports.destroy = function (req, res) {
   Recipe.find({"_id" : req.recipe._id}, function (err, recipes) {
     if(err) {
       handleError(res);

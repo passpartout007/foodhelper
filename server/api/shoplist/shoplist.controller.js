@@ -64,7 +64,7 @@ function handleError(res, statusCode) {
 }
 
 // Gets a list of Shoplists
-export function index(req, res) {
+module.exports.index = function (req, res) {
   Shoplist.find()
     .populate("recipes")
     .then(respondWithResult(res))
@@ -72,7 +72,7 @@ export function index(req, res) {
 }
 
 // Gets a single Shoplist from the DB
-export function show(req, res) {
+module.exports.show = function (req, res) {
   Shoplist.findById(req.params.shoplist)
     .populate("recipes")
     .then(handleEntityNotFound(res))
@@ -81,14 +81,14 @@ export function show(req, res) {
 }
 
 // Creates a new Shoplist in the DB
-export function create(req, res) {
+module.exports.create = function (req, res)  {
   Shoplist.createAsync(req.body)
     .then(respondWithResult(res, 201))
     .catch(handleError(res));
 }
 
 // Updates an existing Shoplist in the DB
-export function update(req, res) {
+module.exports.update = function (req, res)  {
   if (req.body._id) {
     delete req.body._id;
   }
@@ -100,7 +100,7 @@ export function update(req, res) {
 }
 
 // Adds a recipe to the shoplist
-export function addRecipe(req, res) {
+module.exports.addRecipe = function (req, res)  {
   if(req.shoplist) {
     var recipes = JSON.parse(req.body.id);
     for(var k in recipes) {
@@ -128,7 +128,7 @@ export function addRecipe(req, res) {
 }
 
 // Deletes a Shoplist from the DB
-export function destroy(req, res) {
+module.exports.destroy = function (req, res)  {
   Shoplist.findByIdAsync(req.params.shoplist)
     .then(handleEntityNotFound(res))
     .then(removeEntity(res))
@@ -136,7 +136,7 @@ export function destroy(req, res) {
 }
 
 // Deletes a recipe from a shoplist in the DB
-export function destroyRecipe(req, res) {
+module.exports.destroyRecipe = function (req, res)  {
   var deleted = false;
   for(var k in req.shoplist.recipes) {
     if(req.shoplist.recipes[k] == req.params.recipe) {
@@ -153,7 +153,7 @@ export function destroyRecipe(req, res) {
 }
 
 // Sends a mail with the shoplist
-export function sendMail(req, res) {
+module.exports.sendMail = function (req, res) {
   if(req.shoplist) {
     console.log(req.body);
     var mailOptions = {

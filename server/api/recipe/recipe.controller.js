@@ -62,7 +62,7 @@ function handleError(res, statusCode) {
 }
 
 // Gets a list of Recipes
-export function index(req, res) {
+module.exports.index = function (req, res) {
   Recipe.find()
     .populate("ingredients")
     .execAsync()
@@ -71,7 +71,7 @@ export function index(req, res) {
 }
 
 // Gets a single Recipe from the DB
-export function show(req, res) {
+module.exports.show = function (req, res) {
   Recipe.findById(req.params.recipe)
     .populate("ingredients")
     .then(handleEntityNotFound(res))
@@ -80,14 +80,14 @@ export function show(req, res) {
 }
 
 // Creates a new Recipe in the DB
-export function create(req, res) {
+module.exports.create = function (req, res) {
   Recipe.createAsync(req.body)
     .then(respondWithResult(res, 201))
     .catch(handleError(res));
 }
 
 // Updates an existing Recipe in the DB
-export function update(req, res) {
+module.exports.update = function (req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
@@ -99,7 +99,7 @@ export function update(req, res) {
 }
 
 // Deletes a Recipe from the DB
-export function destroy(req, res) {
+module.exports.destroy = function (req, res) {
   Recipe.findByIdAsync(req.params.recipe)
     .then(handleEntityNotFound(res))
     .then(removeEntity(res))
