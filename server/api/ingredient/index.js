@@ -2,7 +2,7 @@
 
 var express = require('express');
 var controller = require('./ingredient.controller');
-import Recipe from '../recipe/recipe.model';
+var Recipe = require('../recipe/recipe.model');
 
 var router = express.Router();
 

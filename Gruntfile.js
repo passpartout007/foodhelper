@@ -23,6 +23,7 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -546,6 +547,7 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
+        presets: ['es2015'],
         optional: [
           'es7.classProperties'
         ]

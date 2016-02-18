@@ -20,7 +20,7 @@ var connectMongo = require('connect-mongo');
 var mongoose = require('mongoose');
 var mongoStore = connectMongo(session);
 
-export default function(app) {
+var myFunction =  function(app) {
   var env = app.get('env');
 
   app.set('views', config.root + '/server/views');
@@ -83,3 +83,5 @@ export default function(app) {
     app.use(errorHandler()); // Error handler - has to be last
   }
 }
+
+module.exports = myFunction;

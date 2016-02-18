@@ -30,4 +30,4 @@ function emitEvent(event) {
   }
 }
 
-export default ShoplistEvents;
+module.exports = ShoplistEvents;
