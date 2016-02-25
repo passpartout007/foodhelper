@@ -60,7 +60,6 @@ class MainController {
   rateRecipe(aRecipe, rating) {
     if (aRecipe) {
       var tmpRecipe = aRecipe;
-      tmpRecipe.rating = rating;
       this.$http.put('/api/recipes/' + tmpRecipe._id, tmpRecipe).success(function(data){
         aRecipe = tmpRecipe;
       });
@@ -103,7 +102,9 @@ class MainController {
         imagePath: image, 
         boughtDate: this.newDate, 
         creationDate: Date.now,
-        rating: this.newRating 
+        rating: this.newRating, 
+        archive: false, 
+        accepted: false
       }).success((function(that) {
         return function(data) {
           that.getIngredients(data);

@@ -79,7 +79,7 @@
 			"file": "client/app/main/main.html",
 			"settings":
 			{
-				"buffer_size": 17875,
+				"buffer_size": 17882,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,7 +103,7 @@
 			"file": "client/app/main/main.controller.ts",
 			"settings":
 			{
-				"buffer_size": 6201,
+				"buffer_size": 6218,
 				"line_ending": "Unix"
 			}
 		},
@@ -125,42 +125,18 @@
 			}
 		},
 		{
-			"file": "server/api/ingredient/ingredient.controller.js",
+			"file": "server/config/environment/development.js",
 			"settings":
 			{
-				"buffer_size": 4225,
+				"buffer_size": 255,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/api/recipe/recipe.controller.js",
+			"file": "server/routes.js",
 			"settings":
 			{
-				"buffer_size": 2410,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/api/shoplist/shoplist.controller.js",
-			"settings":
-			{
-				"buffer_size": 4347,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/api/shoplist/index.js",
-			"settings":
-			{
-				"buffer_size": 991,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 20732,
+				"buffer_size": 861,
 				"line_ending": "Unix"
 			}
 		}
@@ -189,19 +165,49 @@
 	},
 	"file_history":
 	[
-		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.controller.ts",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.controller.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/index.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/environment/production.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/Gruntfile.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/app.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/.jshintrc",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/index.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/navbar/navbar.html",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.controller.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/routes.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/express.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.integration.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/seed.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/bootstrap/dist/css/bootstrap-theme.css.map",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.events.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.events.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.events.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.model.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.events.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/index.js",
+		"/D/Users/plesecq/Documents/Formation/idées flashcapi",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-core/lib/generation/generators/expressions.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-core/node_modules/babylon/lib/parser/expression.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/package.json",
+		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/index.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-core/lib/transformation/file/options/option-manager.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/.babelrc",
+		"/C/Users/plesecq/workspaces-angular/food-helper/mocha.conf.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/protractor.conf.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/mongoose/examples/express/connection-sharing/app.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-preset-es2015/README.md",
+		"/C/Users/plesecq/workspaces-angular/food-helper/dist/server/app.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/dist/server/index.js",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-core/node_modules/babel-plugin-eval/README.md",
+		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/babel-core/templates.json",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.controller.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.ts",
+		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/navbar/navbar.html",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/navbar/navbar.controller.ts",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.css",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.controller.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.controller.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/shoplist/main.css",
-		"/C/Users/plesecq/workspaces-angular/food-helper/Gruntfile.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/ids/ids.filter.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/index.html",
 		"/C/Users/plesecq/workspaces-angular/food-helper/tsconfig.client.json",
@@ -210,14 +216,9 @@
 		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/grunt-injector/tasks/injector.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/ids/ids.filter.spec.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/components/footer/footer.html",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/routes.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/shoplist/shoplist.model.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/package.json",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/angular-bootstrap-switch/src/directives/bsSwitch.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.model.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/tooltip/tooltip.directive.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/app.constant.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/app.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/flow-node.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/flow-node.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/dist/client/index.html",
@@ -228,16 +229,11 @@
 		"/C/Users/plesecq/workspaces-angular/food-helper/.tmp/app/main/main.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/recipes/recipes.service.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/archive/archive.html",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.model.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/ingredient/ingredient.integration.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/seed.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/composition/composition.model.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/recipe/recipe.integration.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/config/express.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/node_modules/express/lib/express.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.controller.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.model.js",
-		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/thing/thing.integration.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/server/api/plat/plat.model.js",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/app/main/main.html",
 		"/C/Users/plesecq/workspaces-angular/food-helper/client/bower_components/angular-ui-router/release/angular-ui-router.js",
@@ -266,13 +262,15 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
+			"",
+			"C:\\Users\\plesecq\\workspaces-angular\\food-helper\\client,C:\\Users\\plesecq\\workspaces-angular\\food-helper\\server",
 			""
 		]
 	},
@@ -281,6 +279,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"use",
+			"getingre",
+			"switch",
+			"archive",
+			"switch",
+			"rate",
+			"dist",
+			"127.0.0.1",
+			"export ",
+			"import ",
+			"export defau",
+			"exports",
+			"export",
+			"babel",
+			"loade",
+			"extra",
+			"load-grun",
+			"babel",
+			"this.log",
+			"express",
+			"import ",
+			"ista",
+			"babel",
+			"\"presets\":",
+			"babel-core",
+			"babel-register",
+			"babel",
+			"deploy",
 			"date",
 			"format",
 			"watch",
@@ -380,35 +406,7 @@
 			".save",
 			"saveUpdates",
 			"saveUpdates\n",
-			".save",
-			"Recipe",
-			"files",
-			"/app",
-			"ids",
-			"injector",
-			"serve",
-			"jsTest",
-			"injectCss",
-			"injectJS",
-			"ids",
-			"files",
-			"inject",
-			"injectJS",
-			"injectJS\n",
-			"yeoman.client",
-			"injector",
-			"js",
-			"ids",
-			"starttag",
-			"inject",
-			"filter",
-			"direct",
-			"ids",
-			"ids.",
-			"idsfilter",
-			"filter",
-			"each",
-			"update"
+			".save"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -431,7 +429,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -439,14 +437,14 @@
 					"file": "client/app/main/main.html",
 					"settings":
 					{
-						"buffer_size": 17875,
+						"buffer_size": 17882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3429,
+								3410,
 								3449
 							]
 						],
@@ -457,7 +455,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 229.0,
+						"translation.y": 209.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -502,8 +500,8 @@
 						"selection":
 						[
 							[
-								2549,
-								2553
+								1422,
+								1422
 							]
 						],
 						"settings":
@@ -513,7 +511,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 533.0,
+						"translation.y": 115.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -523,15 +521,15 @@
 					"file": "client/app/main/main.controller.ts",
 					"settings":
 					{
-						"buffer_size": 6201,
+						"buffer_size": 6218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5438,
-								5438
+								2950,
+								2957
 							]
 						],
 						"settings":
@@ -541,7 +539,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2908.0,
+						"translation.y": 1564.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -558,8 +556,8 @@
 						"selection":
 						[
 							[
-								1025,
-								1025
+								1856,
+								1554
 							]
 						],
 						"settings":
@@ -570,7 +568,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 228.0,
+						"translation.y": 291.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -605,102 +603,18 @@
 				},
 				{
 					"buffer": 6,
-					"file": "server/api/ingredient/ingredient.controller.js",
+					"file": "server/config/environment/development.js",
 					"settings":
 					{
-						"buffer_size": 4225,
+						"buffer_size": 255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2296,
-								2296
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1141.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/api/recipe/recipe.controller.js",
-					"settings":
-					{
-						"buffer_size": 2410,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1657,
-								1657
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1388.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "server/api/shoplist/shoplist.controller.js",
-					"settings":
-					{
-						"buffer_size": 4347,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								941,
-								941
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "server/api/shoplist/index.js",
-					"settings":
-					{
-						"buffer_size": 991,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								742,
-								750
+								110,
+								110
 							]
 						],
 						"settings":
@@ -714,19 +628,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "Gruntfile.js",
+					"buffer": 7,
+					"file": "server/routes.js",
 					"settings":
 					{
-						"buffer_size": 20732,
+						"buffer_size": 861,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18072,
-								18072
+								861,
+								861
 							]
 						],
 						"settings":
@@ -736,7 +650,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12826.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -786,6 +700,62 @@
 		"selected_items":
 		[
 			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"app.js",
+				"server/app.js"
+			],
+			[
+				"routes.js",
+				"server/routes.js"
+			],
+			[
+				"expression",
+				"node_modules/babel-core/lib/generation/generators/expressions.js"
+			],
+			[
+				"expression.",
+				"node_modules/babel-core/node_modules/babylon/lib/parser/expression.js"
+			],
+			[
+				"express.",
+				"server/config/express.js"
+			],
+			[
+				"package.json",
+				"package.json"
+			],
+			[
+				"gruntfile",
+				"Gruntfile.js"
+			],
+			[
+				"erver/config/",
+				"server/config/express.js"
+			],
+			[
+				"option-manager",
+				"node_modules/babel-core/lib/transformation/file/options/option-manager.js"
+			],
+			[
+				"gruntfie.j",
+				"Gruntfile.js"
+			],
+			[
+				"gruntfile.js",
+				"Gruntfile.js"
+			],
+			[
+				"babel-core",
+				"node_modules/babel-core/templates.json"
+			],
+			[
+				"gruntfile.",
+				"Gruntfile.js"
+			],
+			[
 				"grunts",
 				"Gruntfile.js"
 			],
@@ -812,14 +782,6 @@
 			[
 				"index.htm",
 				"client/index.html"
-			],
-			[
-				"app.js",
-				".tmp/app/app.js"
-			],
-			[
-				"gruntf",
-				"Gruntfile.js"
 			],
 			[
 				"injector",
@@ -870,10 +832,6 @@
 				"client/index.html"
 			],
 			[
-				"routes.js",
-				"server/routes.js"
-			],
-			[
 				"package.",
 				"package.json"
 			],
@@ -884,10 +842,6 @@
 			[
 				"routes.",
 				"server/routes.js"
-			],
-			[
-				"package.json",
-				"package.json"
 			],
 			[
 				"flow.m",
@@ -924,10 +878,6 @@
 			[
 				"angular-ui-",
 				"client/bower_components/angular-ui-router/release/angular-ui-router.js"
-			],
-			[
-				"gruntfile.",
-				"Gruntfile.js"
 			],
 			[
 				"appan",

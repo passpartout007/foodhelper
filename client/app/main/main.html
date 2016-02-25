@@ -51,9 +51,9 @@
               <span class="glyphicon glyphicon-star-empty" ng-show="recipe.rating < 5" ng-click="main.rateRecipe(recipe, 5)"></span>
               <span class="glyphicon glyphicon-star" ng-show="recipe.rating >= 5" ng-click="main.rateRecipe(recipe, 5)"></span>
             </span>    
-            <span class="small" ng-bind="'Consommé le ' + (recipe.boughtDate | date:'dd/MM/yyyy')"/>
+            <span class="small" ng-bind="'Consommé le ' + (recipe.boughtDate | date:'dd/MM/yyyy')"></span>
             <span class="pull-right">
-              <input bs-switch ng-model="recipe.accepted" type="checkbox" switch-on-text="Oui" switch-off-text="Non" ng-change="main.updateAccepted(recipe)" >
+              <input bs-switch ng-model="recipe.accepted" type="checkbox" switch-on-text="Oui" switch-off-text="Non" ng-change="main.updateAccepted(recipe)" />
               <span class="btn btn-danger btn-sm" ng-click="main.toggleArchiveRecipe(recipe)">
                 <span class="glyphicon glyphicon-trash" title="Ne plus me proposer ce plat pour l'instant" data-toggle="tooltip" data-placement="left" tooltip></span>
               </span>
@@ -123,20 +123,20 @@
                     <div class="modal-body">
                       <div class="form-group">
                         <ul class="list-group list-ingredients">
+                          <li class="list-group-item new-ingredient">
+                            <input type="text" ng-model="main.newIngredient" placeholder="Nouvel ingrédient" class="col-md-7 input-lg"/>                      
+                            <input type="text" ng-model="main.newQuantity" class="input-quantity col-md-3 input-lg" />
+                            <button type="button" class="btn btn-info pull-right col-md-1" ng-click="main.addIngredient(recipe, main.newIngredient, main.newQuantity)">
+                              <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                          </li>
                           <li class="list-group-item" ng-class="{true:'list-group-item-success', false:''}[aIngredient.quantity!=0]" ng-repeat="aIngredient in recipe.ingredients | filter: main.newIngredient">
-                            <span class="col-md-8">{{aIngredient.name}}</span>                  
-                            <input type="text" ng-model="aQuantity" placeholder="{{aIngredient.quantity}}" class="input-quantity col-md-2" />
+                            <span class="col-md-7">{{aIngredient.name}}</span>                  
+                            <input type="text" ng-model="aQuantity" placeholder="{{aIngredient.quantity}}" class="input-quantity col-md-3" />
                             <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(recipe, aIngredient.name, aQuantity)">
                               <span class="glyphicon glyphicon-ok"></span>
                             </button>
-                          </li>
-                          <li class="list-group-item">
-                            <input type="text" ng-model="main.newIngredient" placeholder="Nouvel ingrédient" class="col-md-8"/>                      
-                            <input type="text" ng-model="main.newQuantity" class="input-quantity col-md-2" />
-                            <button type="button" class="btn btn-success btn-sm pull-right col-md-1" ng-click="main.addIngredient(recipe, main.newIngredient, main.newQuantity)">
-                              <span class="glyphicon glyphicon-ok"></span>
-                            </button>
-                          </li>
+                          </li>                          
                         </ul>
                       </div>
                     </div>

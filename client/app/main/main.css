@@ -55,6 +55,9 @@
   height: 50px;
   line-height: 24px;
 }
+.list-ingredients .new-ingredient {
+  height: 68px;
+}
 
 .list-ingredients .btn-success {
     margin-left: 5px;
@@ -125,4 +128,8 @@ input[type="date"]::-webkit-inner-spin-button { display: none; }
 
 .ingredients-list {
   cursor: pointer;
+}
+ul.list-ingredients {
+    max-height: 550px;
+    overflow-y: scroll;
 }

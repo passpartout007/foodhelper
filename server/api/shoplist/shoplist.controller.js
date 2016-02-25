@@ -122,7 +122,7 @@ module.exports.addRecipe = function (req, res)  {
     }
     req.shoplist.save(function(err, shoplist) {
       if(err){ return next(err); }
-      show(req, res);
+      module.exports.show(req, res);
     }); 
   }
 }
